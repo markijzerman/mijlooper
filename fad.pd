@@ -1,4 +1,4 @@
-#N canvas 1055 23 450 300 10;
+#N canvas 1052 51 450 300 10;
 #X obj 44 14 ctlin;
 #X obj 47 125 route;
 #X obj 95 42 f \$1;
@@ -7,6 +7,8 @@
 #X obj 41 100 pack;
 #X obj 45 147 / 127;
 #X obj 45 171 outlet;
+#X obj 140 111 loadbang;
+#X msg 141 155 1;
 #X connect 0 0 4 0;
 #X connect 0 1 4 1;
 #X connect 1 0 6 0;
@@ -16,3 +18,5 @@
 #X connect 4 1 5 1;
 #X connect 5 0 1 0;
 #X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
