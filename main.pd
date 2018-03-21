@@ -1,4 +1,5 @@
-#N canvas 868 174 1343 1045 10;
+#N canvas 841 156 1343 1045 10;
+#X declare -stdlib zexy -stdpath zexy;
 #N canvas 1911 540 519 560 masterloop_rec 0;
 #X obj 22 24 inlet;
 #X obj 22 46 change;
@@ -184,7 +185,7 @@
 #X obj 232 662 led 66;
 #X obj 538 272 led 35;
 #X obj 680 268 led 67;
-#N canvas 2080 328 450 300 array 0;
+#N canvas 2077 326 450 300 array 0;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array masterloop 2.28e+06 float 2;
 #X coords 0 1 2.28e+06 -1 200 140 1;
@@ -199,7 +200,7 @@
 #X obj 521 747 *~;
 #X obj 532 679 led 36;
 #X obj 673 672 led 68;
-#X obj 1063 223 tgl 35 0 empty sl_rec slaveloop_rec 0 -8 0 15 -258113
+#X obj 1056 222 tgl 35 0 empty sl_rec slaveloop_rec 0 -8 0 15 -258113
 -1 -1 0 1;
 #X obj 922 224 tgl 35 0 empty sl_on slaveloop_play 0 -8 0 12 -260097
 -1 -1 0 1;
@@ -310,7 +311,7 @@
 #X obj 752 291 r footrec-3;
 #X obj 759 647 r footrec-4;
 #X obj 1197 209 r footrec-5;
-#N canvas 543 468 1288 779 saveArrays 0;
+#N canvas 939 457 1288 779 saveArrays 1;
 #X obj 82 32 ctlin;
 #X msg 183 96 3;
 #X obj 182 72 loadbang;
@@ -356,11 +357,12 @@
 #X obj 152 198 time;
 #X obj 32 321 cyclone/uzi 6;
 #X obj 87 149 cyclone/match 62 60 58;
-#X obj 53 200 date;
 #X obj 60 269 t a b;
 #X msg 538 274 \; masterloop resize \$1 \; 2-slaveloop resize \$1 \;
 3-slaveloop resize \$1 \; 4-slaveloop resize \$1 \; 5-slaveloop resize
 \$1 \; 6-slaveloop resize \$1 \;;
+#X obj 52 194 date;
+#X obj 409 66 declare -stdlib zexy -stdpath zexy;
 #X connect 0 0 4 0;
 #X connect 0 1 4 1;
 #X connect 1 0 3 1;
@@ -370,7 +372,7 @@
 #X connect 4 1 5 1;
 #X connect 5 0 3 0;
 #X connect 9 0 8 0;
-#X connect 10 0 28 0;
+#X connect 10 0 30 0;
 #X connect 10 1 25 0;
 #X connect 11 0 20 0;
 #X connect 12 0 26 0;
@@ -384,8 +386,8 @@
 #X connect 17 0 24 0;
 #X connect 18 0 24 0;
 #X connect 19 0 9 0;
-#X connect 20 0 29 0;
-#X connect 21 0 30 0;
+#X connect 20 0 28 0;
+#X connect 21 0 29 0;
 #X connect 22 0 21 1;
 #X connect 23 0 14 1;
 #X connect 24 0 19 1;
@@ -394,11 +396,11 @@
 #X connect 25 2 11 5;
 #X connect 26 2 16 0;
 #X connect 27 0 10 0;
-#X connect 28 0 11 0;
-#X connect 28 1 11 1;
-#X connect 28 2 11 2;
-#X connect 29 0 12 0;
-#X connect 29 1 21 0;
+#X connect 28 0 12 0;
+#X connect 28 1 21 0;
+#X connect 30 0 11 0;
+#X connect 30 1 11 1;
+#X connect 30 2 11 2;
 #X restore 144 23 pd saveArrays;
 #X obj 70 462 slaveloop_recplay 2;
 #X obj 79 706 slaveloop_recplay 3;
